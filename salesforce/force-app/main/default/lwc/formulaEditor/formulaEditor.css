@@ -1,0 +1,9 @@
+.formula-editor { font-size: 13px; }
+.cost-value { color: #0070d2; font-weight: bold; }
+.cost-highlight { color: #16325c; font-size: 1.5rem; font-weight: bold; }
+.ingredient-table input.slds-input_bare { width: 100%; border: none; background: transparent; font-size: 12px; padding: 2px 4px; }
+.ingredient-table input.slds-input_bare:focus { border-bottom: 1px solid #0070d2; outline: none; }
+.ingredient-table td { vertical-align: middle; padding: 2px 4px; }
+.price-new { background-color: #d4edda !important; }
+.price-mid { background-color: #fff3cd !important; }
+.price-old { background-color: #f8d7da !important; }

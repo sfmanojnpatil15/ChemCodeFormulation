@@ -1,0 +1,127 @@
+<template>
+    <div class="slds-p-around_small">
+        <!-- Bottle Packaging -->
+        <template if:true={isBottles}>
+            <lightning-card title="Bottle Packaging" icon-name="standard:product">
+                <div class="slds-p-around_medium">
+                    <lightning-button label="Add Size" icon-name="utility:add" onclick={handleAddBottle}></lightning-button>
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-m-top_small">
+                        <thead>
+                            <tr>
+                                <th>Size Count</th><th>Category</th><th>Material Name</th>
+                                <th>Vendor</th><th>Unit Cost</th><th>Component Code</th>
+                                <th>Default</th><th>Del</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={bottleRows} for:item="row">
+                                <tr key={row.rowKey}>
+                                    <td><input class="slds-input slds-input_bare" type="number" value={row.Size_Count__c} data-id={row.rowKey} data-field="Size_Count__c" onchange={handleBottleChange}></td>
+                                    <td><input class="slds-input slds-input_bare" value={row.Category__c} data-id={row.rowKey} data-field="Category__c" onchange={handleBottleChange}></td>
+                                    <td><input class="slds-input slds-input_bare" value={row.Material_Name__c} data-id={row.rowKey} data-field="Material_Name__c" onchange={handleBottleChange}></td>
+                                    <td><input class="slds-input slds-input_bare" value={row.Vendor_Name__c} data-id={row.rowKey} data-field="Vendor_Name__c" onchange={handleBottleChange}></td>
+                                    <td><input class="slds-input slds-input_bare" type="number" value={row.Unit_Cost__c} data-id={row.rowKey} data-field="Unit_Cost__c" onchange={handleBottleChange} onblur={recalculate}></td>
+                                    <td><input class="slds-input slds-input_bare" value={row.Component_Code__c} data-id={row.rowKey} data-field="Component_Code__c" onchange={handleBottleChange}></td>
+                                    <td><lightning-input type="checkbox" checked={row.Is_Default__c} data-id={row.rowKey} onchange={handleDefaultToggle}></lightning-input></td>
+                                    <td><lightning-button-icon icon-name="utility:delete" variant="bare" data-id={row.rowKey} onclick={handleDeleteBottle}></lightning-button-icon></td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                    <div class="slds-m-top_small">
+                        <lightning-button label="Save Bottle Packaging" variant="brand" onclick={handleSaveBottles}></lightning-button>
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+
+        <!-- Stick Pack Packaging -->
+        <template if:true={isStickPacks}>
+            <lightning-card title="Stick Pack Details" icon-name="standard:product">
+                <div class="slds-p-around_medium">
+                    <p class="slds-text-body_small">Configure stick pack sizes, costs, and display box details below.</p>
+                    <lightning-button label="Add Stick Pack" icon-name="utility:add" onclick={handleAddStickPack}></lightning-button>
+                    <div class="slds-m-top_small">
+                        <lightning-datatable
+                            key-field="rowKey"
+                            data={stickPackRows}
+                            columns={stickPackColumns}
+                            oncellchange={handleStickPackChange}
+                            draft-values={stickPackDraftValues}>
+                        </lightning-datatable>
+                    </div>
+                    <lightning-button label="Save Stick Packs" variant="brand" class="slds-m-top_small" onclick={handleSaveStickPacks}></lightning-button>
+                </div>
+            </lightning-card>
+        </template>
+
+        <!-- Blister Packaging -->
+        <template if:true={isBlisters}>
+            <lightning-card title="Blister Pack Details" icon-name="standard:product">
+                <div class="slds-p-around_medium">
+                    <div class="slds-grid slds-gutters slds-wrap">
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input type="number" label="Blister Count" value={blister.Blister_Count__c} step="1" onchange={handleBlisterChange} data-field="Blister_Count__c"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input type="number" label="Blister Cost" value={blister.Blister_Cost__c} step="0.000001" onchange={handleBlisterChange} data-field="Blister_Cost__c"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input type="number" label="Pack Out" value={blister.Pack_Out__c} step="0.000001" onchange={handleBlisterChange} data-field="Pack_Out__c"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input type="number" label="Shrink Wrap" value={blister.Shrink_Wrap__c} step="0.000001" onchange={handleBlisterChange} data-field="Shrink_Wrap__c"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input type="number" label="Wafer Seal" value={blister.Wafer_Seal__c} step="0.000001" onchange={handleBlisterChange} data-field="Wafer_Seal__c"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input type="number" label="Printing Cost" value={blister.Printing_Cost__c} step="0.000001" onchange={handleBlisterChange} data-field="Printing_Cost__c"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input type="number" label="Printing Plates" value={blister.Printing_Plates__c} step="0.000001" onchange={handleBlisterChange} data-field="Printing_Plates__c"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input type="number" label="Art Preparation" value={blister.Art_Preparation__c} step="0.000001" onchange={handleBlisterChange} data-field="Art_Preparation__c"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input type="number" label="Tooling Cost" value={blister.Tooling_Cost__c} step="0.000001" onchange={handleBlisterChange} data-field="Tooling_Cost__c"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input type="number" label="Other Cost" value={blister.Other_Cost__c} step="0.000001" onchange={handleBlisterChange} data-field="Other_Cost__c"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input type="number" label="Shipper Case Count" value={blister.Shipper_Case_Count__c} step="1" onchange={handleBlisterChange} data-field="Shipper_Case_Count__c"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input type="number" label="Shipper Case Cost" value={blister.Shipper_Case_Cost__c} step="0.000001" onchange={handleBlisterChange} data-field="Shipper_Case_Cost__c"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input type="number" label="R&amp;D (Bulk)" value={blister.Research_Development_Bulk__c} step="0.000001" onchange={handleBlisterChange} data-field="Research_Development_Bulk__c"></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_3-of-12">
+                            <lightning-input type="number" label="R&amp;D (Box)" value={blister.Research_Development_Box__c} step="0.000001" onchange={handleBlisterChange} data-field="Research_Development_Box__c"></lightning-input>
+                        </div>
+                    </div>
+                    <div class="slds-m-top_small">
+                        <p><strong>Total Blister Unit Cost: {blisterTotalCostFormatted}</strong></p>
+                        <lightning-button label="Save Blister Details" variant="brand" class="slds-m-top_small" onclick={handleSaveBlisters}></lightning-button>
+                    </div>
+                </div>
+            </lightning-card>
+        </template>
+
+        <!-- Stand Up Bags -->
+        <template if:true={isStandUpBags}>
+            <lightning-card title="Stand-Up Bag Details" icon-name="standard:product">
+                <div class="slds-p-around_medium">
+                    <lightning-button label="Add Bag Size" icon-name="utility:add" onclick={handleAddBag}></lightning-button>
+                    <lightning-datatable key-field="rowKey" data={bagRows2} columns={bagColumns}
+                        oncellchange={handleBagChange} draft-values={bagDraftValues} class="slds-m-top_small">
+                    </lightning-datatable>
+                    <lightning-button label="Save Bags" variant="brand" class="slds-m-top_small" onclick={handleSaveBags}></lightning-button>
+                </div>
+            </lightning-card>
+        </template>
+    </div>
+</template>

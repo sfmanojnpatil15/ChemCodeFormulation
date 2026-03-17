@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stick_Packs__c</fullName><label>Stick Packs Cost</label><precision>18</precision><required>false</required><scale>6</scale><trackHistory>false</trackHistory><type>Number</type><unique>false</unique>
+</CustomField>
