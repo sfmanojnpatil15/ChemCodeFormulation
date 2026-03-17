@@ -6,6 +6,9 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>BPG Costing</label>
+    <formFactors>
+        <formFactor>Large</formFactor>
+    </formFactors>
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
     <tabs>Formula__c</tabs>
