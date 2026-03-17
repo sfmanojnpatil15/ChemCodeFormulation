@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
-    <defaultLandingTab>Formula__c</defaultLandingTab>
+    <defaultLandingTab>standard-home</defaultLandingTab>
     <description>BPG Costing - Chemical Formula Costing and Pricing Management. Migrated from VB.NET desktop application.</description>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
