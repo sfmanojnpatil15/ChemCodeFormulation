@@ -1,0 +1,520 @@
+Error:
+Message: The file 'D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\bin\Debug\Images\GTLogo.jpg' does not exist.
+Line Number: 613
+Method Name: Int32 PrintHeader()
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\SpecificationsForm.vb
+Time: 09:47:27
+------------------------------------------------------------------------------------
+
+Error:
+Message: The process cannot access the file because it is being used by another process
+Line Number: 6986
+Method Name: Void btnPrintWorkSheet_Click(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 11:48:01
+------------------------------------------------------------------------------------
+
+Error:
+Message: Operator '-' is not defined for type 'DBNull' and type 'Decimal'.
+Line Number: 8221
+Method Name: Boolean CheckUnsavedChanges(System.Object, Boolean)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 12:20:21
+------------------------------------------------------------------------------------
+
+Error:
+Message: Operator '-' is not defined for type 'DBNull' and type 'Decimal'.
+Line Number: 8221
+Method Name: Boolean CheckUnsavedChanges(System.Object, Boolean)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 12:50:50
+------------------------------------------------------------------------------------
+
+Error:
+Message: Operator '-' is not defined for type 'DBNull' and type 'Decimal'.
+Line Number: 8221
+Method Name: Boolean CheckUnsavedChanges(System.Object, Boolean)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 12:50:59
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:02
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <100111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:04
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:04
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:04
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <1001111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:04
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:04
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:04
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:04
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:04
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:04
+------------------------------------------------------------------------------------
+
+Error:
+Message: Value was either too large or too small for an Int32.Couldn't store <10011111111111111111> in StickPacks Column.  Expected type is Int32.
+Line Number: 4266
+Method Name: Void StickPack_TextBox_TextChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:05:04
+------------------------------------------------------------------------------------
+

@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\PdfiumViewer.Native.x86.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86.v8-xfa.props" Condition="Exists('packages\PdfiumViewer.Native.x86.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86.v8-xfa.props')" />
+  <Import Project="packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86_64.v8-xfa.props" Condition="Exists('packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86_64.v8-xfa.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D6A207A-E916-4D64-B91A-8AAD4F77CC23}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>BPG_Costing.My.MyApplication</StartupObject>
+    <RootNamespace>BPG_Costing</RootNamespace>
+    <AssemblyName>GT Demo</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>\\brand2023\public\costing system\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <InstallUrl>https://www.bloomhealth.io/public_html/bpg/</InstallUrl>
+    <PublisherName>Programe LLC</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>40</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>GT Demo.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>GT Demo.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E5DB9E2A872E466B9D0E0DBB7FBB793D819DDBC4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>outofbox.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Outlook.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Outlook.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Common Files\Microsoft Shared\Visual Basic Power Packs\1.1\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.6\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfiumViewer, Version=2.13.0.0, Culture=neutral, PublicKeyToken=91e4789cfb0609e0, processorArchitecture=MSIL">
+      <HintPath>packages\PdfiumViewer.2.13.0.0\lib\net20\PdfiumViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp-WPF">
+      <HintPath>..\..\Brand Packaging Costing\Daniel\Brand Packaging Cost\bin\Debug\PdfSharp-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting-WPF">
+      <HintPath>..\..\Brand Packaging Costing\Daniel\Brand Packaging Cost\bin\Debug\PdfSharp.Charting-WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net451\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helper.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\SentQuotes.Designer.vb" />
+    <Compile Include="My Project\SentQuotes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Resources\Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\EditMaterial.Designer.vb">
+      <DependentUpon>EditMaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\EditMaterial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\FormulaName.Designer.vb">
+      <DependentUpon>FormulaName.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\FormulaName.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Formulator2.Designer.vb">
+      <DependentUpon>Formulator2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Formulator2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\NewMaterial.Designer.vb">
+      <DependentUpon>NewMaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\NewMaterial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Preview.Designer.vb">
+      <DependentUpon>Preview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Preview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\PriceTags.Designer.vb">
+      <DependentUpon>PriceTags.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\PriceTags.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\SalesRepDetails.Designer.vb">
+      <DependentUpon>SalesRepDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\SalesRepDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\SendForm.Designer.vb">
+      <DependentUpon>SendForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\SendForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\SettingsForm.Designer.vb">
+      <DependentUpon>SettingsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\SettingsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\SpecificationsForm.Designer.vb">
+      <DependentUpon>SpecificationsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\SpecificationsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\UpdateFreightCost.Designer.vb">
+      <DependentUpon>UpdateFreightCost.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\UpdateFreightCost.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\User.Designer.vb">
+      <DependentUpon>User.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\User.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\Preview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\SentQuotes.resx" />
+    <EmbeddedResource Include="Resources\Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EditMaterial.resx">
+      <DependentUpon>EditMaterial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FormulaName.resx">
+      <DependentUpon>FormulaName.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Formulator2.resx">
+      <DependentUpon>Formulator2.vb</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\NewMaterial.resx">
+      <DependentUpon>NewMaterial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Preview.resx">
+      <DependentUpon>Preview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PriceTags.resx">
+      <DependentUpon>PriceTags.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SalesRepDetails.resx">
+      <DependentUpon>SalesRepDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SendForm.resx">
+      <DependentUpon>SendForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SettingsForm.resx">
+      <DependentUpon>SettingsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SpecificationsForm.resx">
+      <DependentUpon>SpecificationsForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\UpdateFreightCost.resx">
+      <DependentUpon>UpdateFreightCost.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\User.resx">
+      <DependentUpon>User.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages\Microsoft.Office.Interop.Outlook.15.0.4797.1004\.signature.p7s" />
+    <None Include="packages\Microsoft.Office.Interop.Outlook.15.0.4797.1004\Microsoft.Office.Interop.Outlook.15.0.4797.1004.nupkg" />
+    <None Include="packages\PdfiumViewer.2.13.0.0\.signature.p7s" />
+    <None Include="packages\PdfiumViewer.2.13.0.0\PdfiumViewer.2.13.0.0.nupkg" />
+    <None Include="packages\PdfiumViewer.2.13.0.0\Tools\Install.ps1" />
+    <None Include="packages\PdfiumViewer.Native.x86.v8-xfa.2018.4.8.256\.signature.p7s" />
+    <None Include="packages\PdfiumViewer.Native.x86.v8-xfa.2018.4.8.256\Build\PdfiumViewer.Native.x86.v8-xfa.props" />
+    <None Include="packages\PdfiumViewer.Native.x86.v8-xfa.2018.4.8.256\PdfiumViewer.Native.x86.v8-xfa.2018.4.8.256.nupkg" />
+    <None Include="packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.4.8.256\.signature.p7s" />
+    <None Include="packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.4.8.256\Build\PdfiumViewer.Native.x86_64.v8-xfa.props" />
+    <None Include="packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.4.8.256\PdfiumViewer.Native.x86_64.v8-xfa.2018.4.8.256.nupkg" />
+    <None Include="packages\System.Data.Common.4.3.0\.signature.p7s" />
+    <None Include="packages\System.Data.Common.4.3.0\lib\MonoAndroid10\_._" />
+    <None Include="packages\System.Data.Common.4.3.0\lib\MonoTouch10\_._" />
+    <None Include="packages\System.Data.Common.4.3.0\lib\xamarinios10\_._" />
+    <None Include="packages\System.Data.Common.4.3.0\lib\xamarinmac20\_._" />
+    <None Include="packages\System.Data.Common.4.3.0\lib\xamarintvos10\_._" />
+    <None Include="packages\System.Data.Common.4.3.0\lib\xamarinwatchos10\_._" />
+    <None Include="packages\System.Data.Common.4.3.0\ref\MonoAndroid10\_._" />
+    <None Include="packages\System.Data.Common.4.3.0\ref\MonoTouch10\_._" />
+    <None Include="packages\System.Data.Common.4.3.0\ref\xamarinios10\_._" />
+    <None Include="packages\System.Data.Common.4.3.0\ref\xamarinmac20\_._" />
+    <None Include="packages\System.Data.Common.4.3.0\ref\xamarintvos10\_._" />
+    <None Include="packages\System.Data.Common.4.3.0\ref\xamarinwatchos10\_._" />
+    <None Include="packages\System.Data.Common.4.3.0\System.Data.Common.4.3.0.nupkg" />
+    <None Include="packages\System.Data.SqlClient.4.8.3\.signature.p7s" />
+    <None Include="packages\System.Data.SqlClient.4.8.3\lib\MonoAndroid10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.3\lib\MonoTouch10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.3\lib\xamarinios10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.3\lib\xamarinmac20\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.3\lib\xamarintvos10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.3\lib\xamarinwatchos10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.3\ref\MonoAndroid10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.3\ref\MonoTouch10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.3\ref\xamarinios10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.3\ref\xamarinmac20\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.3\ref\xamarintvos10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.3\ref\xamarinwatchos10\_._" />
+    <None Include="packages\System.Data.SqlClient.4.8.3\System.Data.SqlClient.4.8.3.nupkg" />
+    <None Include="Resources\brand-packaging-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="outofbox.ico" />
+    <Content Include="packages\Microsoft.Office.Interop.Outlook.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Outlook.dll" />
+    <Content Include="packages\Microsoft.Office.Interop.Outlook.15.0.4797.1004\lib\netstandard2.0\Microsoft.Office.Interop.Outlook.dll" />
+    <Content Include="packages\PdfiumViewer.2.13.0.0\lib\net20\nl\PdfiumViewer.resources.dll" />
+    <Content Include="packages\PdfiumViewer.2.13.0.0\lib\net20\PdfiumViewer.dll" />
+    <Content Include="packages\PdfiumViewer.2.13.0.0\lib\net20\PdfiumViewer.xml" />
+    <Content Include="packages\PdfiumViewer.Native.x86.v8-xfa.2018.4.8.256\Build\x86\pdfium.dll" />
+    <Content Include="packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.4.8.256\Build\x64\pdfium.dll" />
+    <Content Include="packages\System.Data.Common.4.3.0\dotnet_library_license.txt" />
+    <Content Include="packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll" />
+    <Content Include="packages\System.Data.Common.4.3.0\lib\netstandard1.2\System.Data.Common.dll" />
+    <Content Include="packages\System.Data.Common.4.3.0\lib\portable-net451+win8+wp8+wpa81\System.Data.Common.dll" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\net451\System.Data.Common.dll" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\netstandard1.2\de\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\netstandard1.2\es\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\netstandard1.2\fr\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\netstandard1.2\it\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\netstandard1.2\ja\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\netstandard1.2\ko\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\netstandard1.2\ru\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\netstandard1.2\System.Data.Common.dll" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\netstandard1.2\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\netstandard1.2\zh-hans\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\netstandard1.2\zh-hant\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\portable-net451+win8+wp8+wpa81\de\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\portable-net451+win8+wp8+wpa81\es\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\portable-net451+win8+wp8+wpa81\fr\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\portable-net451+win8+wp8+wpa81\it\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\portable-net451+win8+wp8+wpa81\ja\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\portable-net451+win8+wp8+wpa81\ko\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\portable-net451+win8+wp8+wpa81\ru\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\portable-net451+win8+wp8+wpa81\System.Data.Common.dll" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\portable-net451+win8+wp8+wpa81\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\portable-net451+win8+wp8+wpa81\zh-hans\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ref\portable-net451+win8+wp8+wpa81\zh-hant\System.Data.Common.xml" />
+    <Content Include="packages\System.Data.Common.4.3.0\ThirdPartyNotices.txt" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\Icon.png" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\lib\net451\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\lib\net46\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\lib\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\lib\netstandard1.2\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\lib\netstandard1.2\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\lib\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\lib\netstandard1.3\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\lib\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\lib\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\LICENSE.TXT" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\net451\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\net461\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\net461\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\net46\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\de\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\es\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\fr\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\it\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\ja\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\ko\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\ru\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\zh-hans\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.2\zh-hant\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\de\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\es\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\fr\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\it\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\ja\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\ko\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\ru\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\zh-hans\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard1.3\zh-hant\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\ref\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\net451\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\net461\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\net461\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\net46\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netstandard1.3\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.xml" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Data.SqlClient.4.8.3\version.txt" />
+    <Content Include="Resources\brand_nutra_green_logo.png" />
+    <Content Include="Resources\GTLogo.png" />
+    <None Include="Resources\footer_icons.jpg" />
+    <None Include="Resources\calender.png" />
+    <None Include="Resources\favicon.ico" />
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="BPG Costing.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="BPG Costing.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="office">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86_64.v8-xfa.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\PdfiumViewer.Native.x86_64.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86_64.v8-xfa.props'))" />
+    <Error Condition="!Exists('packages\PdfiumViewer.Native.x86.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86.v8-xfa.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\PdfiumViewer.Native.x86.v8-xfa.2018.4.8.256\build\PdfiumViewer.Native.x86.v8-xfa.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

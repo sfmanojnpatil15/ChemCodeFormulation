@@ -1,0 +1,8 @@
+Error:
+Message: Concurrency violation: the UpdateCommand affected 0 of the expected 1 records.
+Line Number: 5366
+Method Name: Void dasal_commands()
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Resources\Formulator2.vb
+Time: 14:29:46
+------------------------------------------------------------------------------------
+

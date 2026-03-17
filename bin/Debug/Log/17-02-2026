@@ -1,0 +1,104 @@
+Error:
+Message: Concurrency violation: the UpdateCommand affected 0 of the expected 1 records.
+Line Number: 5793
+Method Name: Void dsStandupBags_commands()
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 44\BPG Costing_04-02-2026\Resources\Formulator2.vb
+Time: 11:12:15
+------------------------------------------------------------------------------------
+
+Error:
+Message: Index 0 is either negative or above rows count.
+Line Number: 4196
+Method Name: Void ComboBox5_SelectedIndexChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 44\BPG Costing_04-02-2026\Resources\Formulator2.vb
+Time: 11:12:29
+------------------------------------------------------------------------------------
+
+Error:
+Message: Index 0 is either negative or above rows count.
+Line Number: 1074
+Method Name: Void PopulateFormulator2()
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 44\BPG Costing_04-02-2026\Resources\Formulator2.vb
+Time: 11:12:31
+------------------------------------------------------------------------------------
+
+Error:
+Message: Index 0 is either negative or above rows count.
+Line Number: 1074
+Method Name: Void PopulateFormulator2()
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 44\BPG Costing_04-02-2026\Resources\Formulator2.vb
+Time: 11:12:33
+------------------------------------------------------------------------------------
+
+Error:
+Message: Index 0 is either negative or above rows count.
+Line Number: 1074
+Method Name: Void PopulateFormulator2()
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 44\BPG Costing_04-02-2026\Resources\Formulator2.vb
+Time: 11:12:37
+------------------------------------------------------------------------------------
+
+Error:
+Message: Index 0 is either negative or above rows count.
+Line Number: 4196
+Method Name: Void ComboBox5_SelectedIndexChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 44\BPG Costing_04-02-2026\Resources\Formulator2.vb
+Time: 11:13:51
+------------------------------------------------------------------------------------
+
+Error:
+Message: Index 0 is either negative or above rows count.
+Line Number: 1074
+Method Name: Void PopulateFormulator2()
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 44\BPG Costing_04-02-2026\Resources\Formulator2.vb
+Time: 11:13:52
+------------------------------------------------------------------------------------
+
+Error:
+Message: Index 0 is either negative or above rows count.
+Line Number: 1074
+Method Name: Void PopulateFormulator2()
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 44\BPG Costing_04-02-2026\Resources\Formulator2.vb
+Time: 11:13:55
+------------------------------------------------------------------------------------
+
+Error:
+Message: Index 0 is either negative or above rows count.
+Line Number: 4196
+Method Name: Void ComboBox5_SelectedIndexChanged(System.Object, System.EventArgs)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 44\BPG Costing_04-02-2026\Resources\Formulator2.vb
+Time: 11:13:58
+------------------------------------------------------------------------------------
+
+Error:
+Message: Index 0 is either negative or above rows count.
+Line Number: 1074
+Method Name: Void PopulateFormulator2()
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 44\BPG Costing_04-02-2026\Resources\Formulator2.vb
+Time: 11:13:59
+------------------------------------------------------------------------------------
+
+Error:
+Message: Index 0 is either negative or above rows count.
+Line Number: 1074
+Method Name: Void PopulateFormulator2()
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 44\BPG Costing_04-02-2026\Resources\Formulator2.vb
+Time: 11:14:03
+------------------------------------------------------------------------------------
+
+Error:
+Message: Operator '-' is not defined for type 'DBNull' and type 'Decimal'.
+Line Number: 8220
+Method Name: Boolean CheckUnsavedChanges(System.Object, Boolean)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 44\BPG Costing_04-02-2026\Resources\Formulator2.vb
+Time: 11:55:56
+------------------------------------------------------------------------------------
+
+Error:
+Message: Authentication to host 'localhost' for user 'zuhadymy_bpg_db' using method 'mysql_native_password' failed with message: Access denied for user 'zuhadymy_bpg_db'@'localhost' (using password: YES)
+Line Number: 65
+Method Name: Boolean login(System.Windows.Forms.TextBox, System.Windows.Forms.TextBox, System.Windows.Forms.Form)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 44\BPG Costing_17-02-2026\Helper.vb
+Time: 12:04:32
+------------------------------------------------------------------------------------
+

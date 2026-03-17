@@ -1,0 +1,24 @@
+Error:
+Message: Authentication to host 'localhost' for user 'zuhadymy_bpg_db' using method 'mysql_native_password' failed with message: Access denied for user 'zuhadymy_bpg_db'@'localhost' (using password: YES)
+Line Number: 65
+Method Name: Boolean login(System.Windows.Forms.TextBox, System.Windows.Forms.TextBox, System.Windows.Forms.Form)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Helper.vb
+Time: 10:39:30
+------------------------------------------------------------------------------------
+
+Error:
+Message: Authentication to host 'localhost' for user 'zuhadymy_bpg_db' using method 'mysql_native_password' failed with message: Access denied for user 'zuhadymy_bpg_db'@'localhost' (using password: YES)
+Line Number: 65
+Method Name: Boolean login(System.Windows.Forms.TextBox, System.Windows.Forms.TextBox, System.Windows.Forms.Form)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Helper.vb
+Time: 11:06:41
+------------------------------------------------------------------------------------
+
+Error:
+Message: Authentication to host 'localhost' for user 'zuhadymy_bpg_db' using method 'mysql_native_password' failed with message: Access denied for user 'zuhadymy_bpg_db'@'localhost' (using password: YES)
+Line Number: 65
+Method Name: Boolean login(System.Windows.Forms.TextBox, System.Windows.Forms.TextBox, System.Windows.Forms.Form)
+Class Name: D:\Adarsh\Projects\Brand Packaging Dietary\Setup\Version 25 -\Version 45\BPG Costing_18-02-2026\Helper.vb
+Time: 11:10:30
+------------------------------------------------------------------------------------
+
