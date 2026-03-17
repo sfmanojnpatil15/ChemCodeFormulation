@@ -4,7 +4,7 @@
     <label>Formula</label>
     <referenceTo>Formula__c</referenceTo>
     <relationshipLabel>Sales Details</relationshipLabel>
-    <relationshipName>Sales_Detail__c_r</relationshipName>
+    <relationshipName>Sales_Details</relationshipName>
     <relationshipOrder>0</relationshipOrder>
     <reparentableMasterDetail>false</reparentableMasterDetail>
     <trackHistory>false</trackHistory>

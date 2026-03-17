@@ -4,7 +4,7 @@
     <label>Formula</label>
     <referenceTo>Formula__c</referenceTo>
     <relationshipLabel>Blister Details</relationshipLabel>
-    <relationshipName>Blister_Detail__c_r</relationshipName>
+    <relationshipName>Blister_Details</relationshipName>
     <relationshipOrder>0</relationshipOrder>
     <reparentableMasterDetail>false</reparentableMasterDetail>
     <trackHistory>false</trackHistory>
