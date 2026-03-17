@@ -12,6 +12,8 @@ import getMaterials     from '@salesforce/apex/MaterialController.getMaterials';
 import getSalesReps     from '@salesforce/apex/FormulaController.getSalesReps';
 import getFormulaSettings from '@salesforce/apex/FormulaController.getFormulaSettings';
 import saveFormulaSettings from '@salesforce/apex/FormulaController.saveFormulaSettings';
+import deleteFormula from '@salesforce/apex/FormulaController.deleteFormula';
+import deactivateMaterial from '@salesforce/apex/MaterialController.deactivateMaterial';
 
 export default class FormulaDashboard extends LightningElement {
 
@@ -248,8 +250,7 @@ export default class FormulaDashboard extends LightningElement {
     handleDeleteFormula(formulaId, formulaName) {
         // eslint-disable-next-line no-alert
         if (!confirm('Delete formula "' + formulaName + '"?')) return;
-        import('@salesforce/apex/FormulaController.deleteFormula')
-            .then(deleteFormula => deleteFormula({ formulaId }))
+        deleteFormula({ formulaId })
             .then(() => {
                 this.showSuccess('Formula deleted');
                 refreshApex(this._formulasWireResult);
@@ -282,8 +283,7 @@ export default class FormulaDashboard extends LightningElement {
             this.materialEditorTitle = 'Edit Material: ' + row.Name;
             this.showMaterialEditor = true;
         } else if (action === 'deactivate') {
-            import('@salesforce/apex/MaterialController.deactivateMaterial')
-                .then(deactivate => deactivate({ materialId: row.Id }))
+            deactivateMaterial({ materialId: row.Id })
                 .then(() => this.showSuccess('Material deactivated'))
                 .catch(err => this.showError('Error', err));
         }
