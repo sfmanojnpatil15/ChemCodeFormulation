@@ -12,13 +12,4 @@
     <tabs>standard-Material__c</tabs>
     <tabs>standard-Sales_Rep__c</tabs>
     <uiType>Lightning</uiType>
-    <utilityBar>
-        <utilityBarItems>
-            <name>formulaDashboard</name>
-            <itemComponents>
-                <componentName>c:formulaDashboard</componentName>
-            </itemComponents>
-            <label>Formula Dashboard</label>
-        </utilityBarItems>
-    </utilityBar>
 </CustomApplication>
