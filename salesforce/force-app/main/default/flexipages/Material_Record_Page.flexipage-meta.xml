@@ -13,6 +13,7 @@
     </flexiPageRegions>
     <masterLabel>Material Record Page</masterLabel>
     <sobjectType>Material__c</sobjectType>
+    <type>RecordPage</type>
     <template>
         <name>force_recordLayout:mobileResponsiveTab</name>
     </template>
