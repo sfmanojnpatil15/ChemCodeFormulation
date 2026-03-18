@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
-    <masterLabel>Material Record Page</masterLabel>
-    <pageType>RecordPage</pageType>
-    <sobjectType>Material__c</sobjectType>
-    <template>
-        <name>force_recordLayout:mobileResponsiveTab</name>
-    </template>
     <flexiPageRegions>
         <componentInstances>
             <componentName>c__materialRecordPage</componentName>
@@ -14,4 +8,9 @@
         <name>main</name>
         <type>Region</type>
     </flexiPageRegions>
+    <masterLabel>Material Record Page</masterLabel>
+    <sobjectType>Material__c</sobjectType>
+    <template>
+        <name>force_recordLayout:mobileResponsiveTab</name>
+    </template>
 </FlexiPage>
