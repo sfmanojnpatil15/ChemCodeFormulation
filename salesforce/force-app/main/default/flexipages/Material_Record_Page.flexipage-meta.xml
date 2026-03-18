@@ -5,6 +5,7 @@
             <componentInstance>
                 <componentName>c__materialRecordPage</componentName>
             </componentInstance>
+            <type>componentInstance</type>
         </itemInstances>
         <mode>Append</mode>
         <name>main</name>
