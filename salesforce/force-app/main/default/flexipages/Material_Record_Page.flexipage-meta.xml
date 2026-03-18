@@ -14,6 +14,6 @@
     <sobjectType>Material__c</sobjectType>
     <type>RecordPage</type>
     <template>
-        <name>force_recordLayout:mobileResponsiveTab</name>
+        <name>force_recordLayout:RecordLayoutPage</name>
     </template>
 </FlexiPage>
