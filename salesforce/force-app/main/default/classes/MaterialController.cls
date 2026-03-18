@@ -193,4 +193,27 @@ public with sharing class MaterialController {
             ORDER BY Name ASC
         ];
     }
+
+    /**
+     * Retrieves files attached to a material record.
+     */
+    @AuraEnabled(cacheable=true)
+    public static List<ContentVersion> getAttachments(Id materialId) {
+        List<ContentDocumentLink> links = [
+            SELECT ContentDocumentId
+            FROM ContentDocumentLink
+            WHERE LinkedEntityId = :materialId
+        ];
+        Set<Id> docIds = new Set<Id>();
+        for (ContentDocumentLink link : links) {
+            docIds.add(link.ContentDocumentId);
+        }
+        if (docIds.isEmpty()) return new List<ContentVersion>();
+        return [
+            SELECT Id, Title, ContentDocumentId, CreatedDate
+            FROM ContentVersion
+            WHERE ContentDocumentId IN :docIds AND IsLatest = true
+            ORDER BY CreatedDate DESC
+        ];
+    }
 }
