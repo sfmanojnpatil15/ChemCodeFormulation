@@ -1,0 +1,109 @@
+<template>
+    <lightning-card>
+        <lightning-tabset>
+
+            <!-- ── Tab 1: Material ─────────────────────────────────────── -->
+            <lightning-tab label="Material">
+                <div class="slds-p-around_medium">
+                    <lightning-record-edit-form
+                        record-id={recordId}
+                        object-api-name="Material__c"
+                        onsuccess={handleMaterialSuccess}
+                        onerror={handleMaterialError}>
+
+                        <lightning-messages></lightning-messages>
+
+                        <lightning-input-field field-name="Vendor_Code__c"></lightning-input-field>
+                        <lightning-input-field field-name="Component_Code__c"></lightning-input-field>
+                        <lightning-input-field field-name="Name"></lightning-input-field>
+                        <lightning-input-field field-name="Supplier__c"></lightning-input-field>
+                        <lightning-input-field field-name="Category__c"></lightning-input-field>
+                        <lightning-input-field field-name="Price__c"></lightning-input-field>
+
+                        <div class="slds-grid slds-gutters slds-grid_vertical-align-end">
+                            <div class="slds-col">
+                                <lightning-input-field field-name="Case_Pack__c"></lightning-input-field>
+                            </div>
+                            <div class="slds-col slds-shrink slds-p-bottom_x-small">
+                                <span class="slds-text-body_regular">kg/lb</span>
+                            </div>
+                        </div>
+
+                        <div class="slds-m-top_medium">
+                            <lightning-button
+                                type="submit"
+                                label="Save"
+                                variant="brand">
+                            </lightning-button>
+                        </div>
+                    </lightning-record-edit-form>
+                </div>
+            </lightning-tab>
+
+            <!-- ── Tab 2: Tier Pricing ──────────────────────────────────── -->
+            <lightning-tab label="Tier Pricing">
+                <div class="slds-p-around_medium">
+                    <div class="slds-grid slds-grid_align-end slds-m-bottom_small">
+                        <lightning-button
+                            label="Add"
+                            variant="neutral"
+                            onclick={handleAddTier}>
+                        </lightning-button>
+                    </div>
+
+                    <lightning-datatable
+                        key-field="Id"
+                        data={tierPricingData}
+                        columns={tierColumns}
+                        draft-values={tierDraftValues}
+                        onsave={handleTierSave}
+                        onrowaction={handleTierRowAction}
+                        hide-checkbox-column="true">
+                    </lightning-datatable>
+                </div>
+            </lightning-tab>
+
+            <!-- ── Tab 3: Attachments ───────────────────────────────────── -->
+            <lightning-tab label="Attachments">
+                <div class="slds-p-around_medium">
+                    <div class="slds-grid slds-gutters slds-grid_vertical-align-center slds-m-bottom_small">
+                        <div class="slds-col slds-shrink">
+                            <lightning-file-upload
+                                label="Upload Attachment"
+                                name="fileUploader"
+                                accept={acceptedFormats}
+                                record-id={recordId}
+                                onuploadfinished={handleUploadFinished}
+                                multiple>
+                            </lightning-file-upload>
+                        </div>
+                        <div class="slds-col slds-shrink slds-grid slds-grid_vertical-align-center">
+                            <lightning-button
+                                label="Download"
+                                variant="neutral"
+                                onclick={handleDownload}
+                                disabled={noFileSelected}
+                                class="slds-m-right_x-small">
+                            </lightning-button>
+                            <lightning-button
+                                label="Delete"
+                                variant="neutral"
+                                onclick={handleDeleteFile}
+                                disabled={noFileSelected}>
+                            </lightning-button>
+                        </div>
+                    </div>
+
+                    <lightning-datatable
+                        key-field="Id"
+                        data={attachments}
+                        columns={attachmentColumns}
+                        onrowselection={handleFileRowSelection}
+                        max-row-selection="1">
+                    </lightning-datatable>
+                </div>
+            </lightning-tab>
+
+        </lightning-tabset>
+    </lightning-card>
+</template>

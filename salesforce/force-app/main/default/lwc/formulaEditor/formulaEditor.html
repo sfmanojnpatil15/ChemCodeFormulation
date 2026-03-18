@@ -1,0 +1,374 @@
+<template>
+    <div class="formula-editor">
+        <!-- Formula Header -->
+        <div class="slds-grid slds-gutters slds-m-bottom_small">
+            <div class="slds-col slds-size_3-of-12">
+                <lightning-input label="Formula Name" value={formulaName} onchange={handleNameChange} required></lightning-input>
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+                <lightning-combobox label="Formula Type" value={formulaType} options={formulaTypeOptions} onchange={handleFormulaTypeChange}></lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_3-of-12">
+                <lightning-input label="Customer Name" value={customerName} onchange={handleCustomerChange}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+                <lightning-input label="Sales Rep" value={salesRepName} readonly onclick={openSalesRepLookup}
+                    field-level-help="Click to search for a sales rep"></lightning-input>
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+                <lightning-input label="Version" value={currentVersion} readonly></lightning-input>
+            </div>
+        </div>
+
+        <div class="slds-grid slds-gutters slds-m-bottom_small">
+            <div class="slds-col slds-size_3-of-12">
+                <lightning-input label="Quote Number" value={quoteNumber} readonly></lightning-input>
+            </div>
+            <div class="slds-col slds-size_3-of-12">
+                <lightning-input type="number" label="Serving Size (mg)" value={servingSize}
+                    step="0.0001" min="0" onchange={handleServingSizeChange}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_3-of-12">
+                <lightning-input type="number" label="Servings Per Container" value={servingsPerContainer}
+                    step="1" min="1" onchange={handleServingsChange}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_3-of-12">
+                <lightning-input type="date" label="Date" value={enteredDate} onchange={handleDateChange}></lightning-input>
+            </div>
+        </div>
+
+        <!-- Cost Summary Bar -->
+        <div class="slds-box slds-theme_shade slds-m-bottom_small">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_3-of-12">
+                    <p class="slds-text-body_small">Total Material Cost (per serving)</p>
+                    <p class="slds-text-heading_small cost-value">{totalMaterialCostFormatted}</p>
+                </div>
+                <div class="slds-col slds-size_3-of-12">
+                    <p class="slds-text-body_small">Manufacturing Cost</p>
+                    <p class="slds-text-heading_small cost-value">{manufacturingCostFormatted}</p>
+                </div>
+                <div class="slds-col slds-size_3-of-12">
+                    <p class="slds-text-body_small">Total Unit Cost</p>
+                    <p class="slds-text-heading_large cost-highlight">{totalUnitCostFormatted}</p>
+                </div>
+                <div class="slds-col slds-size_3-of-12 slds-align_absolute-center">
+                    <lightning-button label="Recalculate" variant="neutral" onclick={recalculate}></lightning-button>
+                    <lightning-button label="Save All" variant="brand" class="slds-m-left_x-small" onclick={saveAll}></lightning-button>
+                    <lightning-button label="New Version" variant="neutral" class="slds-m-left_x-small" onclick={createNewVersion}></lightning-button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs for different sections -->
+        <lightning-tabset active-tab-value={activeSection}>
+
+            <!-- INGREDIENTS TAB -->
+            <lightning-tab label="Ingredients" value="ingredients" onactive={handleSectionChange}>
+                <div class="slds-m-top_small">
+                    <div class="slds-m-bottom_small">
+                        <lightning-button label="Add Ingredient" variant="brand" icon-name="utility:add" onclick={handleAddIngredient}></lightning-button>
+                        <span class="slds-m-left_medium slds-text-body_small">Freight: {freightPercentage}%</span>
+                    </div>
+
+                    <!-- Ingredient Grid -->
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered ingredient-table">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th scope="col" style="width:30px">#</th>
+                                <th scope="col" style="width:220px">Material Name</th>
+                                <th scope="col" style="width:120px">Component Code</th>
+                                <th scope="col" style="width:100px">Vendor</th>
+                                <th scope="col" style="width:80px">Actual mg</th>
+                                <th scope="col" style="width:70px">Potency %</th>
+                                <th scope="col" style="width:70px">Overage %</th>
+                                <th scope="col" style="width:80px">mg (calc)</th>
+                                <th scope="col" style="width:80px">Price/kg</th>
+                                <th scope="col" style="width:80px">Cost/srv</th>
+                                <th scope="col" style="width:50px">Manual</th>
+                                <th scope="col" style="width:50px">Del</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={ingredients} for:item="ing" for:index="idx">
+                                <tr key={ing.rowKey} class={ing.rowClass}>
+                                    <td>{ing.displayIndex}</td>
+                                    <td>
+                                        <div class="slds-form-element">
+                                            <input type="text" class="slds-input slds-input_bare"
+                                                value={ing.Material_Name__c}
+                                                data-id={ing.rowKey} data-field="Material_Name__c"
+                                                onchange={handleIngredientChange}
+                                                onclick={handleIngredientNameClick}>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="slds-input slds-input_bare"
+                                            value={ing.Component_Code__c}
+                                            data-id={ing.rowKey} data-field="Component_Code__c"
+                                            onchange={handleIngredientChange} readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="slds-input slds-input_bare"
+                                            value={ing.Vendor_Name__c}
+                                            data-id={ing.rowKey} data-field="Vendor_Name__c"
+                                            onchange={handleIngredientChange}>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="slds-input slds-input_bare"
+                                            value={ing.Actual_Mg__c} step="0.0001"
+                                            data-id={ing.rowKey} data-field="Actual_Mg__c"
+                                            onchange={handleIngredientChange} onblur={recalculateRow}>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="slds-input slds-input_bare"
+                                            value={ing.Potency__c} step="0.01" max="100"
+                                            data-id={ing.rowKey} data-field="Potency__c"
+                                            onchange={handleIngredientChange} onblur={recalculateRow}>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="slds-input slds-input_bare"
+                                            value={ing.Overage__c} step="1"
+                                            data-id={ing.rowKey} data-field="Overage__c"
+                                            onchange={handleIngredientChange} onblur={recalculateRow}>
+                                    </td>
+                                    <td class="slds-text-align_right">{ing.Mg__c}</td>
+                                    <td class={ing.priceClass}>
+                                        <template if:true={ing.Is_Manual__c}>
+                                            <input type="number" class="slds-input slds-input_bare"
+                                                value={ing.Manual_Cost__c} step="0.0001"
+                                                data-id={ing.rowKey} data-field="Manual_Cost__c"
+                                                onchange={handleIngredientChange} onblur={recalculateRow}>
+                                        </template>
+                                        <template if:false={ing.Is_Manual__c}>
+                                            <span>{ing.priceDisplay}</span>
+                                        </template>
+                                    </td>
+                                    <td class="slds-text-align_right">{ing.materialCostDisplay}</td>
+                                    <td class="slds-text-align_center">
+                                        <lightning-input type="checkbox" checked={ing.Is_Manual__c}
+                                            data-id={ing.rowKey} onchange={handleManualToggle}></lightning-input>
+                                    </td>
+                                    <td class="slds-text-align_center">
+                                        <lightning-button-icon icon-name="utility:delete" variant="bare"
+                                            alternative-text="Remove" data-id={ing.rowKey}
+                                            onclick={handleRemoveIngredient}>
+                                        </lightning-button-icon>
+                                    </td>
+                                </tr>
+                            </template>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="9" class="slds-text-align_right slds-text-title_bold">Total Material Cost:</td>
+                                <td class="slds-text-title_bold">{totalMaterialCostFormatted}</td>
+                                <td colspan="2"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </lightning-tab>
+
+            <!-- MANUFACTURING TAB -->
+            <lightning-tab label="Manufacturing" value="manufacturing" onactive={handleSectionChange}>
+                <div class="slds-m-top_small">
+                    <!-- Powder/Blending -->
+                    <template if:true={isPowder}>
+                        <lightning-card title="Blending / Powder Process" icon-name="standard:work_order">
+                            <div class="slds-p-around_medium">
+                                <div class="slds-grid slds-gutters">
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <lightning-input type="number" label="Blending Cost (per kg)"
+                                            value={blending.Blending_Cost__c} step="0.000001"
+                                            onchange={handleBlendingChange} data-field="Blending_Cost__c">
+                                        </lightning-input>
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <lightning-input type="number" label="Wastage %"
+                                            value={blending.Wastage_Percentage__c} step="0.01" min="0" max="100"
+                                            onchange={handleBlendingChange} data-field="Wastage_Percentage__c">
+                                        </lightning-input>
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <lightning-input type="number" label="Lab Cost"
+                                            value={blending.Lab_Cost__c} step="0.000001"
+                                            onchange={handleBlendingChange} data-field="Lab_Cost__c">
+                                        </lightning-input>
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <lightning-input type="number" label="Flavor Profile Cost"
+                                            value={blending.Flavor_Profile__c} step="0.000001"
+                                            onchange={handleBlendingChange} data-field="Flavor_Profile__c">
+                                        </lightning-input>
+                                    </div>
+                                </div>
+                                <div class="slds-m-top_small">
+                                    <p>Wastage Value: <strong>{blendingWastageValue}</strong></p>
+                                </div>
+                            </div>
+                        </lightning-card>
+                    </template>
+
+                    <!-- Tablet -->
+                    <template if:true={isTablet}>
+                        <lightning-card title="Tableting Process" icon-name="standard:work_order">
+                            <div class="slds-p-around_medium">
+                                <div class="slds-grid slds-gutters">
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <lightning-input label="Type of Coating" value={tableting.Type_of_Coating__c}
+                                            onchange={handleTabletingChange} data-field="Type_of_Coating__c">
+                                        </lightning-input>
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <lightning-input type="number" label="Coating Cost" value={tableting.Coating_Cost__c}
+                                            step="0.000001" onchange={handleTabletingChange} data-field="Coating_Cost__c">
+                                        </lightning-input>
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <lightning-input type="number" label="Compression Cost" value={tableting.Compression_Cost__c}
+                                            step="0.000001" onchange={handleTabletingChange} data-field="Compression_Cost__c">
+                                        </lightning-input>
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <lightning-input type="number" label="Wastage %" value={tableting.Wastage_Percentage__c}
+                                            step="0.01" onchange={handleTabletingChange} data-field="Wastage_Percentage__c">
+                                        </lightning-input>
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <lightning-input type="number" label="Lab Cost" value={tableting.Lab_Cost__c}
+                                            step="0.000001" onchange={handleTabletingChange} data-field="Lab_Cost__c">
+                                        </lightning-input>
+                                    </div>
+                                </div>
+                            </div>
+                        </lightning-card>
+                    </template>
+
+                    <!-- Capsule -->
+                    <template if:true={isCapsule}>
+                        <lightning-card title="Encapsulation Process" icon-name="standard:work_order">
+                            <div class="slds-p-around_medium">
+                                <div class="slds-grid slds-gutters">
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <lightning-input label="Type of Capsule" value={encapsulation.Type_of_Capsule__c}
+                                            onchange={handleEncapsulationChange} data-field="Type_of_Capsule__c">
+                                        </lightning-input>
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <lightning-input type="number" label="Capsule Cost" value={encapsulation.Capsule_Cost__c}
+                                            step="0.000001" onchange={handleEncapsulationChange} data-field="Capsule_Cost__c">
+                                        </lightning-input>
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <lightning-input type="number" label="Encapsulation Cost" value={encapsulation.Encapsulation_Cost__c}
+                                            step="0.000001" onchange={handleEncapsulationChange} data-field="Encapsulation_Cost__c">
+                                        </lightning-input>
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <lightning-input type="number" label="Wastage %" value={encapsulation.Wastage_Percentage__c}
+                                            step="0.01" onchange={handleEncapsulationChange} data-field="Wastage_Percentage__c">
+                                        </lightning-input>
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <lightning-input label="Capsule Color" value={encapsulation.Color__c}
+                                            onchange={handleEncapsulationChange} data-field="Color__c">
+                                        </lightning-input>
+                                    </div>
+                                    <div class="slds-col slds-size_3-of-12">
+                                        <lightning-input type="number" label="Lab Cost" value={encapsulation.Lab_Cost__c}
+                                            step="0.000001" onchange={handleEncapsulationChange} data-field="Lab_Cost__c">
+                                        </lightning-input>
+                                    </div>
+                                </div>
+                            </div>
+                        </lightning-card>
+                    </template>
+                </div>
+            </lightning-tab>
+
+            <!-- PACKAGING TAB -->
+            <lightning-tab label="Packaging" value="packaging" onactive={handleSectionChange}>
+                <div class="slds-m-top_small">
+                    <lightning-combobox label="Packaging Type" value={packagingType}
+                        options={packagingTypeOptions} onchange={handlePackagingTypeChange}>
+                    </lightning-combobox>
+                    <div class="slds-m-top_small">
+                        <c-packaging-editor
+                            formula-id={formulaId}
+                            version-number={currentVersion}
+                            packaging-type={packagingType}
+                            formula-type={formulaType}
+                            unit-cost={totalUnitCost}
+                            onpackagingchange={handlePackagingChange}>
+                        </c-packaging-editor>
+                    </div>
+                </div>
+            </lightning-tab>
+
+            <!-- SALES PRICING TAB -->
+            <lightning-tab label="Sales Pricing" value="sales" onactive={handleSectionChange}>
+                <div class="slds-m-top_small">
+                    <c-sales-pricing-grid
+                        formula-id={formulaId}
+                        version-number={currentVersion}
+                        unit-cost={totalUnitCost}
+                        packaging-type={packagingType}
+                        onsalespricechange={handleSalesPriceChange}>
+                    </c-sales-pricing-grid>
+                </div>
+            </lightning-tab>
+
+            <!-- TERMS & CONDITIONS TAB -->
+            <lightning-tab label="Terms &amp; Conditions" value="terms" onactive={handleSectionChange}>
+                <div class="slds-p-around_medium">
+                    <lightning-textarea label="Other Ingredients" value={otherIngredients}
+                        onchange={handleTermsChange} data-field="otherIngredients" rows="3">
+                    </lightning-textarea>
+                    <lightning-textarea label="Lab Testing Cost Policy" value={labTestingPolicy}
+                        onchange={handleTermsChange} data-field="labTestingPolicy" rows="3"
+                        class="slds-m-top_small">
+                    </lightning-textarea>
+                    <lightning-textarea label="Quote Expiry Disclaimer" value={quoteExpiryDisclaimer}
+                        onchange={handleTermsChange} data-field="quoteExpiryDisclaimer" rows="3"
+                        class="slds-m-top_small">
+                    </lightning-textarea>
+                    <lightning-textarea label="Additional Message" value={message}
+                        onchange={handleTermsChange} data-field="message" rows="3"
+                        class="slds-m-top_small">
+                    </lightning-textarea>
+                </div>
+            </lightning-tab>
+
+        </lightning-tabset>
+
+        <!-- Material Lookup Modal -->
+        <template if:true={showMaterialLookup}>
+            <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                                onclick={closeMaterialLookup}>
+                            <lightning-icon icon-name="utility:close" size="small" alternative-text="Close"></lightning-icon>
+                        </button>
+                        <h2>Select Material</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium">
+                        <lightning-input label="Search" value={materialLookupSearch}
+                            onchange={handleMaterialLookupSearch} placeholder="Type material name...">
+                        </lightning-input>
+                        <div class="slds-scrollable_y" style="max-height:400px; margin-top:8px">
+                            <lightning-datatable
+                                key-field="Id"
+                                data={materialLookupResults}
+                                columns={materialLookupColumns}
+                                onrowaction={handleMaterialSelect}
+                                hide-checkbox-column>
+                            </lightning-datatable>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+    </div>
+</template>

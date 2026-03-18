@@ -1,0 +1,91 @@
+<template>
+    <div class="slds-p-around_small">
+        <div class="slds-grid slds-gutters slds-wrap">
+            <div class="slds-col slds-size_6-of-12">
+                <lightning-input
+                    label="Material Name"
+                    value={materialName}
+                    onchange={handleNameChange}
+                    required>
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_6-of-12">
+                <lightning-combobox
+                    label="Category"
+                    value={category}
+                    options={categoryOptions}
+                    onchange={handleCategoryChange}
+                    required>
+                </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_6-of-12 slds-m-top_small">
+                <lightning-input
+                    label="Supplier"
+                    value={supplier}
+                    onchange={handleSupplierChange}>
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_6-of-12 slds-m-top_small">
+                <lightning-input
+                    type="number"
+                    label="Price (per kg)"
+                    value={price}
+                    step="0.000001"
+                    min="0"
+                    onchange={handlePriceChange}>
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_4-of-12 slds-m-top_small">
+                <lightning-input
+                    label="Component Code"
+                    value={componentCode}
+                    onchange={handleComponentCodeChange}>
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_4-of-12 slds-m-top_small">
+                <lightning-input
+                    label="Vendor Code"
+                    value={vendorCode}
+                    onchange={handleVendorCodeChange}>
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_4-of-12 slds-m-top_small">
+                <lightning-input
+                    type="number"
+                    label="Case Pack"
+                    value={casePack}
+                    step="1"
+                    min="0"
+                    onchange={handleCasePackChange}>
+                </lightning-input>
+            </div>
+            <div class="slds-col slds-size_12-of-12 slds-m-top_small">
+                <lightning-input
+                    type="checkbox"
+                    label="Is Active"
+                    checked={isActive}
+                    onchange={handleIsActiveChange}>
+                </lightning-input>
+            </div>
+        </div>
+
+        <div class="slds-m-top_medium">
+            <lightning-button
+                label="Save"
+                variant="brand"
+                onclick={handleSave}
+                disabled={isSaving}>
+            </lightning-button>
+            <lightning-button
+                label="Cancel"
+                variant="neutral"
+                class="slds-m-left_small"
+                onclick={handleCancel}>
+            </lightning-button>
+        </div>
+
+        <template if:true={isSaving}>
+            <lightning-spinner alternative-text="Saving..." size="small"></lightning-spinner>
+        </template>
+    </div>
+</template>

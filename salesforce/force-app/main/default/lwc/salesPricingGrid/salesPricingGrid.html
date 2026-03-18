@@ -1,0 +1,54 @@
+<template>
+    <lightning-card title="Sales Pricing" icon-name="standard:opportunity">
+        <div class="slds-p-around_medium">
+            <!-- Sale Type Tabs (BULK / BOX / BULKBAGS) -->
+            <lightning-tabset active-tab-value={activeSaleType}>
+                <lightning-tab label="Bulk" value="BULK" onactive={handleSaleTypeChange}>
+                    <div class="slds-m-top_small">
+                        <lightning-button label="Add Row" icon-name="utility:add" onclick={handleAddRow} data-type="BULK"></lightning-button>
+                        <lightning-datatable
+                            key-field="rowKey"
+                            data={bulkRows}
+                            columns={saleColumns}
+                            oncellchange={handleCellChange}
+                            onrowaction={handleRowAction}
+                            draft-values={draftValues}
+                            class="slds-m-top_small">
+                        </lightning-datatable>
+                    </div>
+                </lightning-tab>
+                <lightning-tab label="Box / Stick Pack" value="BOX" onactive={handleSaleTypeChange}>
+                    <div class="slds-m-top_small">
+                        <lightning-button label="Add Row" icon-name="utility:add" onclick={handleAddRow} data-type="BOX"></lightning-button>
+                        <lightning-datatable
+                            key-field="rowKey"
+                            data={boxRows}
+                            columns={saleColumns}
+                            oncellchange={handleCellChange}
+                            onrowaction={handleRowAction}
+                            draft-values={draftValues}
+                            class="slds-m-top_small">
+                        </lightning-datatable>
+                    </div>
+                </lightning-tab>
+                <lightning-tab label="Bulk Bags" value="BULKBAGS" onactive={handleSaleTypeChange}>
+                    <div class="slds-m-top_small">
+                        <lightning-button label="Add Row" icon-name="utility:add" onclick={handleAddRow} data-type="BULKBAGS"></lightning-button>
+                        <lightning-datatable
+                            key-field="rowKey"
+                            data={bagRows}
+                            columns={saleColumns}
+                            oncellchange={handleCellChange}
+                            onrowaction={handleRowAction}
+                            draft-values={draftValues}
+                            class="slds-m-top_small">
+                        </lightning-datatable>
+                    </div>
+                </lightning-tab>
+            </lightning-tabset>
+            <div class="slds-m-top_small">
+                <lightning-button label="Save Sales Pricing" variant="brand" onclick={handleSave}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>
